@@ -1,0 +1,27 @@
+<div *ngIf="agencia">
+
+  <div class="main">
+    <label class="form-label" for="agencia-agencia">Agencia: </label>
+    <input class="form-control" id="agencia-agencia" [(ngModel)]="agencia.agencia" placeholder="Agencia">
+    <label class="form-label" for="agencia-direccion">Direccion: </label>
+    <input class="form-control" id="agencia-direccion" [(ngModel)]="agencia.direccion" placeholder="Direccion">
+
+    <label class="form-label" for="agencia-distrito">Provincia: </label>
+    <input class="form-control" id="agencia-distrito" [(ngModel)]="agencia.provincia" placeholder="Distrito">
+
+    <label class="form-label" for="agencia-lat">Latitud: </label>
+    <input class="form-control" id="agencia-lat" [(ngModel)]="agencia.lat" placeholder="Latitud">
+
+    <label class="form-label" for="agencia-lon">Longitud: </label>
+    <input class="form-control" id="agencia-lon" [(ngModel)]="agencia.lon" placeholder="Longitud">
+
+
+    <div class="botons">
+      <button class="btn btn-danger" (click)="goBack()">Atrás</button>
+      <button class="btn btn-success" (click)="save()">Guardar</button>
+    </div>
+
+  </div>
+
+
+</div>

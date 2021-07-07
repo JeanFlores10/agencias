@@ -1,0 +1,25 @@
+
+<div class="loading" *ngIf="!agencias">
+    <div>Cargando</div>
+</div>
+
+
+<div id="agencias" *ngIf="agencias">
+    <h2 class="title">Agencias</h2>
+    <ul class="agencias list-group">
+        <li class="list-group-item point" *ngFor="let agencia of agency"[class.selected]="agencia === selectedAgencia" (click)="onSelect(agencia)">
+            <a class="pointer">
+                <div class="fs-4">  
+                    {{agencia.agencia}}
+                </div>
+                <div class="fs-5">{{agencia.provincia}}</div>
+                <div class="fs-6">{{agencia.direccion}}</div>
+            </a>
+        </li>
+    </ul>
+    
+    
+    <app-detalles [agencia]="selectedAgencia"></app-detalles>
+    
+</div>
+
